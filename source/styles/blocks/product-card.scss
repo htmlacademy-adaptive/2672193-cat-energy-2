@@ -3,13 +3,12 @@
 }
 
 .product-card__link {
-  border: none;
+  text-decoration: none;
 }
 
 .product-card__title {
   @include font-text-secondary(16px, 20px, #222222);
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .product-card__title--special {

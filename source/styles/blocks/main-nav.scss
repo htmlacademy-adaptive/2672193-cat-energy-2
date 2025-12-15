@@ -7,7 +7,7 @@
 }
 
 .main-nav__list {
-  border: none;
+  @include list();
 }
 
 .main-nav__item {

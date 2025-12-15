@@ -7,5 +7,5 @@
 }
 
 .advantages__list {
-  border: none;
+  @include list();
 }
