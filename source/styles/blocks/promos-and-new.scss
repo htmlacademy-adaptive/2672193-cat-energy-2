@@ -1,0 +1,15 @@
+.promos-and-new {
+  border: none;
+}
+
+.promos-and-new__title {
+  @include font-text-secondary(24px, 24px, $color-text-dark);
+}
+
+.promos-and-new__description {
+  @include font-text-secondary(16px, 24px, $color-text-dark);
+}
+
+.promos-and-new__form {
+  border: none;
+}

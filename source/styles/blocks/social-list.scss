@@ -1,0 +1,11 @@
+.social-list {
+  @include list();
+}
+
+.social-list__item {
+  border: none;
+}
+
+.social-list__link {
+  @include font-text-secondary(16px, 16px, $color-text-dark);
+}

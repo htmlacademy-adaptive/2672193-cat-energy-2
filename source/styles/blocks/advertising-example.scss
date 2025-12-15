@@ -1,0 +1,25 @@
+.advertising-example {
+  background-color: $bg-color-dark;
+}
+
+.advertising-example__title {
+  @include font-text-secondary(36px, 40px, $color-text-dark);
+}
+
+.advertising-example__description {
+  @include font-text-primary(14px,18px, $color-text-base);
+  text-transform: lowercase;
+}
+
+.advertising-example__list {
+  border: none;
+}
+
+.advertising-example__subtitle {
+  @include font-text-secondary(14px, 20px, $color-text-dark);
+  text-transform: uppercase;
+}
+
+.advertising-example__slider {
+  border: none;
+}

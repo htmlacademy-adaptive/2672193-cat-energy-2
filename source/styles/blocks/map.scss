@@ -1,0 +1,16 @@
+.map {
+  border: none;
+}
+
+.map__title {
+  @include font-text-secondary(16px, 20px, #111111);
+  text-transform: uppercase;
+}
+
+.map__address {
+  @include font-text-primary(14px, 20px, $color-text-base);
+}
+
+.map__images {
+  border: none;
+}

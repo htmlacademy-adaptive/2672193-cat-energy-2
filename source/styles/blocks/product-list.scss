@@ -1,0 +1,7 @@
+.product-list {
+  @include list();
+}
+
+.product-list__item {
+  border: none;
+}

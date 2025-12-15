@@ -1,0 +1,8 @@
+.input-block {
+  /* ---- */
+}
+
+.input-block::placeholder {
+  @include font-text-secondary(20px, 30px, $color-text-base);
+  text-transform: uppercase;
+}

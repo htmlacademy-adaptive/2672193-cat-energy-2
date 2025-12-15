@@ -1,0 +1,11 @@
+.advantages {
+  border: none;
+}
+
+.advantages__title {
+  @include font-text-secondary(36px, 40px, $color-text-dark);
+}
+
+.advantages__list {
+  border: none;
+}

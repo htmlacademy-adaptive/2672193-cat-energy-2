@@ -1,0 +1,16 @@
+.extra-goods {
+  border: none;
+}
+
+.extra-goods__title {
+  @include font-text-secondary(24px, 24px, $color-text-dark);
+}
+
+.extra-goods__list {
+  border: none;
+}
+
+.extra-goods__advertisement {
+  @include font-text-primary(16px, 20px, $color-text-special);
+  background-color: rgba($bg-color-bright, 85%);
+}

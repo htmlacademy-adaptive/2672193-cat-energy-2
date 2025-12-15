@@ -1,0 +1,8 @@
+.developer-info {
+  border: none;
+}
+
+.developer-info__link {
+  @include font-text-primary(16px, 20px, $color-text-base);
+  text-decoration: none;
+}

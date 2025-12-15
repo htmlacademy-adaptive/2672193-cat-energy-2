@@ -1,0 +1,7 @@
+.offer-list {
+  @include list();
+}
+
+.offer-list__item {
+  border: none;
+}

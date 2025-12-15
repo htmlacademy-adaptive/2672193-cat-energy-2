@@ -1,0 +1,22 @@
+.nutrition-selector {
+  background-color: rgba($bg-color-bright, 85%);
+}
+
+.nutrition-selector__title {
+  @include font-text-secondary(36px, 36px, $color-text-special);
+  text-align: center;
+}
+
+.nutrition-selector__description {
+  @include font-text-secondary(14px, 14px, $color-text-special);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nutrition-selector__image {
+  border: none;
+}
+
+.nutrition-selector__link {
+  border: none;
+}

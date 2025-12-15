@@ -1,0 +1,21 @@
+.main-nav {
+  border: none;
+}
+
+.main-nav__toggle {
+  border: none;
+}
+
+.main-nav__list {
+  border: none;
+}
+
+.main-nav__item {
+  border: none;
+}
+
+.main-nav__link {
+  @include font-text-secondary(20px, 20px, $color-text-dark);
+  text-transform: uppercase;
+  text-decoration: none;
+}
