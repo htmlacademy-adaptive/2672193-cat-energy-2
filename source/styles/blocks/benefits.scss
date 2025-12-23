@@ -3,7 +3,67 @@
 }
 
 .benefits__item {
-  border: none;
+  position: relative;
+}
+
+.benefits__item--useful::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 28px;
+  background-color: $bg-color-bright;
+  background-image: url("../../icons/icon-leaf.svg");
+  left: 0;
+  top: 0;
+}
+
+.benefits__item--easy::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 29px;
+  background-color: $bg-color-bright;
+  background-image: url("../../icons/icon-boiling-water.svg");
+  left: 0;
+  top: 0;
+}
+
+.benefits__item--change::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 30px;
+  background-color: $bg-color-bright;
+  background-image: url("../../icons/icon-eat.svg");
+  left: 0;
+  top: 0;
+}
+
+.benefits__item--results::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27px 31px;
+  background-color: $bg-color-bright;
+  background-image: url("../../icons/icon-alarm.svg");
+  left: 0;
+  top: 0;
 }
 
 .benefits__description {

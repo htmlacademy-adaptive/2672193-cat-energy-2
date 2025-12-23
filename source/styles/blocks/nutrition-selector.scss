@@ -1,5 +1,51 @@
 .nutrition-selector {
+  position: relative;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0% calc(302 / 480 * 100%),
+      #ffffff calc(302 / 480 * 100%) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   background-color: rgba($bg-color-bright, 85%);
+  z-index: -1;
+}
+
+.nutrition-selector::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: calc(302 / 480 * 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgba($bg-color-bright, 85%);
+  top: 0;
+  z-index: -2;
+}
+
+.nutrition-selector::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: calc(302 / 480 * 100%);
+  background:
+    url("../../images/happy-cat-mobile@1x.jpg"),
+    linear-gradient(
+      to right,
+      #4b4b4b 0%,
+      #3a3a3a 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain, cover;
+  top: 0;
+  z-index: -3;
 }
 
 .nutrition-selector__title {
@@ -11,12 +57,17 @@
   @include font-text-secondary(14px, 14px, $color-text-special);
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 .nutrition-selector__image {
-  border: none;
+  display: block;
+  width: 280px;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nutrition-selector__link {
-  border: none;
+  display: block;
 }

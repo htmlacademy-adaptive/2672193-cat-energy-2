@@ -3,6 +3,57 @@
 }
 
 .developer-info__link {
+  position: relative;
+
   @include font-text-primary(16px, 20px, $color-text-base);
   text-decoration: none;
+  color: #666666;
+
+  &:hover,
+  &:focus-visible {
+    &::after {
+      background-color: $bg-color-bright;
+    }
+
+    .developer-info__text {
+      color: $color-text-base;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: #c9e1bb;
+    }
+
+    .developer-info__text {
+      color: #bebebe;
+    }
+  }
+
+  &:disabled {
+    .developer-info__text {
+      color: #bebebe;
+    }
+
+    &::after {
+      background-color: #bebebe;
+    }
+  }
+}
+
+.developer-info__link::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 27px;
+  height: 34px;
+  background-color: #666666;
+  mask-image: url("../../icons/icon-academy.svg");
+  mask-size: 27px 34px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.developer-info__text {
+  color: $color-text-base;
 }

@@ -1,6 +1,68 @@
 .program-card {
   background-color: $bg-color-base;
+  position: relative;
 }
+
+.program-card--slim-cat-outline::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 36px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../icons/slim-cat-outline.svg");
+  z-index: 1;
+  left: 27px;
+  top: 21px;
+}
+
+.program-card--slim-cat-outline::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: $bg-color-bright;
+  border-radius: 50%;
+  left: 20px;
+  top: 24px;
+}
+
+.program-card--strong-cat-outline::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 68px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../icons/strong-cat-outline.svg");
+  z-index: 1;
+  left: 10px;
+  top: 35px;
+}
+
+.program-card--strong-cat-outline::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: $bg-color-bright;
+  border-radius: 50%;
+  left: 20px;
+  top: 24px;
+}
+
 
 .program-card__title {
   @include font-text-secondary(24px, 37px, $color-text-dark);
@@ -12,7 +74,48 @@
 }
 
 .program-card__link {
+  position: relative;
+
   @include font-text-secondary(16px, 16px, $color-text-dark);
   text-transform: uppercase;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 12px;
+    background-color: $color-text-dark;
+    mask-image: url("../../icons/arrow.svg");
+    mask-size: 24px 12px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    margin-left: 15px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text-dark;
+
+    &::after {
+      background-color: $color-text-dark;
+    }
+  }
+
+  &:active {
+    color: #b3b3b3;
+
+    &::after {
+      background-color: #b3b3b3;
+    }
+  }
+
+  &:disabled {
+    color: #bebebe;
+
+    &::after {
+      background-color: #bebebe;
+    }
+  }
 }

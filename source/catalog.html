@@ -14,8 +14,12 @@
 </head>
 
 <body class="page__body">
+  <svg style="display:none;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    <symbol id="plus" viewBox="0 0 30 30">
+      <path stroke="#D3D3D3" stroke-width="2" d="M15 0v30m15-15h-30" />
+    </symbol>
+  </svg>
   <header class="page__header main-header">
-    <!-- class="logo-primary"для-детализированного-логотипа -->
     <a class="main-header__logo logo" href="index.html">
       <picture>
         <source width="70" height="59" type="image/svg+xml" media="(min-width: 1340px)" srcset="images/logo-images-desktop.svg">
@@ -204,6 +208,9 @@
           <a class="product-card__button button" href="#">Заказать</a>
         </li>
         <li class="product-list__item product-card product-card--more">
+          <svg viewBox="0 0 30 30" width="30" height="30">
+            <use href="#plus"></use>
+          </svg>
           <h3 class="product-card__title product-card__title--special">Показать еще 100500 товаров</h3>
           <p class="product-card__subtitle">На самом деле вкусов гораздо больше!</p>
           <a class="product-card__button button button--special" href="#">Показать все</a>
@@ -255,7 +262,9 @@
           <a class="product-card__button button" href="#">Заказать</a>
         </li>
       </ul>
-      <span class="extra-goods__advertisement">Закажите все и получите чехол для кота в подарок!</span>
+      <div class="extra-goods__advertisement">
+        <span class="extra-goods__subtitle">Закажите все и получите чехол для кота в подарок!</span>
+      </div>
     </section>
 
     <section class="promos-and-new">
@@ -285,27 +294,40 @@
     </div>
     <div class="main-footer__links">
       <a class="main-footer__logo logo" href="index.html">
-        <img class="logo__text" src="#" width="128" height="24" alt="Cat energy">
+        <img class="logo__img" src="images/logo-text-mobile.svg" width="101" height="18" alt="Товарный знак компании Кэт Энерджи">
       </a>
       <ul class="main-footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Вконтакте</span>
+            <svg class="social-list__icon icon" width="27" height="17">
+              <use href="#vk">
+              </use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--youtube" href="youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Ютуб</span>
+            <svg class="social-list__icon icon" width="24" height="19">
+              <use href="#youtube">
+              </use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
+            <svg class="social-list__icon icon" width="20" height="18">
+              <use href="#telegram">
+              </use>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="main-footer__copyright developer-info">
-        <a class="developer-info__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <a class="developer-info__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="developer-info__text">HTML Academy</span>
         </a>
       </div>
     </div>

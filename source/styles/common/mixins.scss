@@ -31,3 +31,20 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin link-states($color, $hover, $active, $disabled) {
+  color: $color;
+
+  &:hover,
+  &:focus-visible {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &:disabled {
+    color: $disabled;
+  }
+}

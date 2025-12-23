@@ -1,7 +1,10 @@
 .slider {
-  border: none;
+  min-height: 256px;
+  height: 100%;
 }
 
 .slider__button {
-  border: none;
+  display: block;
+  width: 4px;
+  height: 100%;
 }

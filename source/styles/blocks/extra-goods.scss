@@ -2,6 +2,55 @@
   border: none;
 }
 
+.extra-goods__advertisement {
+  position: relative;
+
+  @include font-text-primary(16px, 20px, $color-text-special);
+  width: 100%;
+  min-height: 290px;
+  background:
+    url("../../images/backpack-cat-mobile@1x.jpg"),
+    linear-gradient(
+      to right,
+      #cdcdcd 0%,
+      #9a9ea6 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain, cover;
+  bottom: 0;
+  z-index: -2;
+}
+
+.extra-goods__advertisement::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  min-height: 290px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgba($bg-color-bright, 85%);
+  bottom: 0;
+  z-index: -1;
+}
+
+.extra-goods__advertisement::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 78px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../icons/icon-gift.svg");
+  left: 50%;
+  top: 59px;
+  transform: translate(-50%);
+}
+
 .extra-goods__title {
   @include font-text-secondary(24px, 24px, $color-text-dark);
 }
@@ -10,7 +59,10 @@
   border: none;
 }
 
-.extra-goods__advertisement {
-  @include font-text-primary(16px, 20px, $color-text-special);
-  background-color: rgba($bg-color-bright, 85%);
+.extra-goods__subtitle {
+  display: block;
+  text-align: center;
+  padding-left: 58px;
+  padding-right: 61px;
+  padding-top: 187px;
 }
