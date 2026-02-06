@@ -1,19 +1,24 @@
 .page {
-  border: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .page__body {
-  border: none;
+  margin: 0;
 }
 
-.page__header {
-  border: none;
+@media (min-width: $desktop-width) {
+  .page__header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .page__main {
-  border: none;
-}
-
-.page__footer {
-  border: none;
+  overflow-x: hidden;
 }

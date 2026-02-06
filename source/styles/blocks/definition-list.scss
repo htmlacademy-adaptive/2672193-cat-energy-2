@@ -1,16 +1,60 @@
 .definition-list {
   @include list();
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.definition-list__wrapper {
-  border: none;
+/* --
+@media (min-width: $tablet-width) {
+  .definition-list {
+    border: none;
+  }
 }
+  -- */
 
 .definition-list__description {
-  @include font-text-primary(12px, 12px, $color-text-base);
+  @include font-text-secondary(24px, 24px, $color-text-dark);
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  min-width: 124px;
+  max-width: 124px;
+  min-height: 28px;
+  padding: 14px 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .definition-list__description {
+    @include font-text-secondary(30px, 37px, $color-text-dark);
+    min-width: 162px;
+    max-width: 162px;
+  }
 }
 
 .definition-list__term {
-  @include font-text-secondary(24px, 24px, $color-text-dark);
-  text-transform: uppercase;
+  @include font-text-primary(12px, 12px, $color-text-base);
+  background-color: #eaeaea;
+  width: min-content;
+  max-width: 116px;
+  padding: 0 16px;
+  position: relative;
+  top: -11px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .definition-list__term {
+    @include font-text-primary(14px, 14px, $color-text-base);
+    background-color: $color-text-special;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .definition-list__term {
+    background-color: #eaeaea;
+  }
 }

@@ -1,15 +1,130 @@
 .promos-and-new {
-  border: none;
+  min-width: 280px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .promos-and-new__title {
-  @include font-text-secondary(24px, 24px, $color-text-dark);
+  color: #000000;
+  background-color: #ffffff;
+  width: fit-content;
+  margin: 0 0 32px;
+  padding-right: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+}
+
+.promos-and-new__title::before {
+  content: "";
+  z-index: -1;
+  background-color: #68b738;
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 20px);
+}
+
+.promos-and-new__title::after {
+  content: "";
+  z-index: -1;
+  background-color: #68b738;
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
 }
 
 .promos-and-new__description {
-  @include font-text-secondary(16px, 24px, $color-text-dark);
+  color: #000000;
+  text-align: center;
+  margin: 0 0 24px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.promos-and-new__form {
-  border: none;
+@media (width >= 768px) {
+  .promos-and-new {
+    min-width: 632px;
+    max-width: 632px;
+    padding: 0 38px;
+  }
+}
+
+@media (width >= 768px) {
+  .promos-and-new__title {
+    color: #000000;
+    margin-bottom: 66px;
+    margin-left: -40px;
+    padding-left: 40px;
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}
+
+@media (width >= 768px) {
+  .promos-and-new__title::before {
+    content: "";
+    z-index: -1;
+    background-color: #68b738;
+    width: 100vw;
+    height: 2px;
+    position: absolute;
+    top: 45%;
+    right: 100%;
+  }
+}
+
+@media (width >= 768px) {
+  .promos-and-new__description {
+    color: #000000;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}
+
+@media (width >= 768px) {
+  .promos-and-new__form {
+    justify-content: center;
+    margin-bottom: 80px;
+    display: flex;
+  }
+}
+
+@media (width >= 1340px) {
+  .promos-and-new {
+    min-width: 1220px;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 96px 60px 104px;
+  }
+}
+
+@media (width >= 1340px) {
+  .promos-and-new__title {
+    margin: 0 0 72px -40px;
+  }
+}
+
+@media (width >= 1340px) {
+  .promos-and-new__form {
+    margin-bottom: 0;
+  }
 }

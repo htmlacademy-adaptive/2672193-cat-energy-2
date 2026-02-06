@@ -1,9 +1,41 @@
 .advantages {
-  border: none;
+  min-width: 280px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 20px 20px 49px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    min-width: 708px;
+    max-width: 708px;
+    margin: 0 auto;
+    padding: 45px 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    min-width: 1220px;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 71px 60px 0;
+    border: none;
+  }
 }
 
 .advantages__title {
   @include font-text-secondary(36px, 40px, $color-text-dark);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__title {
+    @include font-text-secondary(60px, 60px, $color-text-dark);
+    margin-bottom: 32px;
+  }
 }
 
 .advantages__list {

@@ -1,6 +1,20 @@
 .program-card {
   background-color: $bg-color-base;
   position: relative;
+  padding: 30px 33px 18px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card {
+    padding: 77px 52px 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card {
+    width: 466px;
+    padding-bottom: 55px;
+  }
 }
 
 .program-card--slim-cat-outline::before {
@@ -18,6 +32,25 @@
   top: 21px;
 }
 
+@media (min-width: $tablet-width) {
+  .program-card--slim-cat-outline::before {
+    width: 140px;
+    height: 194px;
+    left: auto;
+    right: 93px;
+    top: 81px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card--slim-cat-outline::before {
+    width: 70px;
+    height: 97px;
+    left: 67px;
+    top: 41px;
+  }
+}
+
 .program-card--slim-cat-outline::after {
   position: absolute;
   display: block;
@@ -33,6 +66,26 @@
   top: 24px;
 }
 
+@media (min-width: $tablet-width) {
+  .program-card--slim-cat-outline::after {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    right: 63px;
+    top: 92px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card--slim-cat-outline::after {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 47px;
+  }
+}
+
+
 .program-card--strong-cat-outline::before {
   position: absolute;
   display: block;
@@ -46,6 +99,25 @@
   z-index: 1;
   left: 10px;
   top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card--strong-cat-outline::before {
+    width: 268px;
+    height: 112px;
+    left: auto;
+    right: 29px;
+    top: 135px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card--strong-cat-outline::before {
+    width: 134px;
+    height: 56px;
+    left: 33px;
+    top: 67px;
+  }
 }
 
 .program-card--strong-cat-outline::after {
@@ -63,14 +135,87 @@
   top: 24px;
 }
 
+@media (min-width: $tablet-width) {
+  .program-card--strong-cat-outline::after {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    right: 63px;
+    top: 92px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card--strong-cat-outline::after {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 47px;
+  }
+}
 
 .program-card__title {
   @include font-text-secondary(24px, 37px, $color-text-dark);
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 29px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card__title {
+    @include font-text-secondary(36px, 36px, $color-text-dark);
+    margin-left: 0;
+    margin-bottom: 24px;
+    margin-right: 316px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card__title {
+    margin: 0;
+    margin-left: 162px;
+    margin-bottom: 77px;
+  }
 }
 
 .program-card__description {
   @include font-text-primary(14px, 18px, $color-text-base);
+  margin: 0;
+  margin-bottom: 38px;
+  position: relative;
+}
+
+.program-card__description::after {
+  content: "";
+  background-color: #d9d9d9;
+  width: 240px;
+  height: 1px;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card__description {
+    @include font-text-primary(16px, 24px, $color-text-dark);
+    margin-left: 0;
+    margin-bottom: 48px;
+    margin-right: 316px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program-card__description::after {
+    content: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-card__description {
+    margin: 0;
+    margin-bottom: 23px;
+  }
 }
 
 .program-card__link {
@@ -79,20 +224,10 @@
   @include font-text-secondary(16px, 16px, $color-text-dark);
   text-transform: uppercase;
   text-decoration: none;
-
-  &::after {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 24px;
-    height: 12px;
-    background-color: $color-text-dark;
-    mask-image: url("../../icons/arrow.svg");
-    mask-size: 24px 12px;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    margin-left: 15px;
-  }
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 4px 0;
 
   &:hover,
   &:focus-visible {
@@ -100,6 +235,8 @@
 
     &::after {
       background-color: $color-text-dark;
+      width: 32px;
+      mask-size: 32px 12px;
     }
   }
 
@@ -108,6 +245,8 @@
 
     &::after {
       background-color: #b3b3b3;
+      width: 32px;
+      mask-size: 32px 12px;
     }
   }
 
@@ -117,5 +256,25 @@
     &::after {
       background-color: #bebebe;
     }
+  }
+}
+
+.program-card__link::after {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 12px;
+  background-color: $color-text-dark;
+  mask-image: url("../../icons/arrow.svg");
+  mask-size: 24px 12px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  margin-top: 1px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card__link {
+    @include font-text-secondary(20px, 30px, $color-text-dark);
+    gap: 25px;
   }
 }

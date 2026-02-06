@@ -4,6 +4,23 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  padding: 10px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: #5eaa2f;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    @include font-text-secondary(16px, 20px, $color-text-special);
+  }
 }
 
 .button--special {

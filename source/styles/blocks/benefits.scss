@@ -1,71 +1,192 @@
-.benefits {
-  border: none;
+@media (min-width: $tablet-width) {
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px 137px;
+    counter-reset: benefits__item 0;
+    margin-bottom: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .benefits {
+    gap: 77px;
+    margin-bottom: 0;
+  }
 }
 
 .benefits__item {
   position: relative;
+  margin-left: 80px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  counter-increment: benefits__item 1;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $bg-color-bright;
+    left: -80px;
+    top: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .benefits__item {
+    counter-increment: benefits__item 1;
+    max-width: 250px;
+    min-height: 72px;
+    padding-top: 151px;
+    padding-bottom: 57px;
+    margin: 0;
+    display: block;
+  }
+
+  .benefits__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .benefits__item::before {
+    top: 40px;
+  }
 }
 
 .benefits__item--useful::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 25px 28px;
-  background-color: $bg-color-bright;
   background-image: url("../../icons/icon-leaf.svg");
-  left: 0;
-  top: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .benefits__item--useful {
+    width: 230px;
+    margin-right: 16px;
+  }
+
+  .benefits__item--useful::before {
+    width: 80px;
+    height: 80px;
+    left: 0;
+  }
+
+  .benefits__item--useful::after {
+    content: counter(benefits__item);
+    color: #f2f2f2;
+    z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 
 .benefits__item--easy::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 26px 29px;
-  background-color: $bg-color-bright;
   background-image: url("../../icons/icon-boiling-water.svg");
-  left: 0;
-  top: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .benefits__item--easy {
+    width: 246px;
+  }
+
+  .benefits__item--easy::before {
+    width: 80px;
+    height: 80px;
+    left: 0;
+  }
+
+  .benefits__item--easy::after {
+    content: counter(benefits__item);
+    color: #f2f2f2;
+    z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
 .benefits__item--change::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 25px 30px;
-  background-color: $bg-color-bright;
   background-image: url("../../icons/icon-eat.svg");
-  left: 0;
-  top: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .benefits__item--change {
+    width: 247px;
+  }
+
+  .benefits__item--change::before {
+    width: 80px;
+    height: 80px;
+    left: 0;
+  }
+
+  .benefits__item--change::after {
+    content: counter(benefits__item);
+    color: #f2f2f2;
+    z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .benefits__item--results::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 27px 31px;
-  background-color: $bg-color-bright;
   background-image: url("../../icons/icon-alarm.svg");
-  left: 0;
-  top: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .benefits__item--results {
+    width: 249px;
+  }
+
+  .benefits__item--results::before {
+    width: 80px;
+    height: 80px;
+    left: 0;
+  }
+
+  .benefits__item--results::after {
+    content: counter(benefits__item);
+    color: #f2f2f2;
+    z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .benefits__description {
   @include font-text-primary(14px, 18px, $color-text-base);
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .benefits__description {
+    @include font-text-primary(16px, 24px, $color-text-base);
+  }
 }

@@ -1,10 +1,23 @@
 .social-list {
-  @include list();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
+@media (min-width: $tablet-width) {
+  .social-list {
+    border: none;
+  }
+}
+
+/* --
 .social-list__item {
   border: none;
 }
+  -- */
 
 .social-list__link {
   @include font-text-secondary(16px, 16px, #666666);
@@ -28,6 +41,7 @@
       background-color: #bebebe;
     }
   }
+  vertical-align: middle;
 }
 
 .social-list__link--vk {

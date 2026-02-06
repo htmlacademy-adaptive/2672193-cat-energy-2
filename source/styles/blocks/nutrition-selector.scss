@@ -1,6 +1,5 @@
 .nutrition-selector {
   position: relative;
-
   background:
     linear-gradient(
       to bottom,
@@ -10,8 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: rgba($bg-color-bright, 85%);
-  z-index: -1;
+  width: 100%;
 }
 
 .nutrition-selector::before {
@@ -22,9 +20,10 @@
   height: calc(302 / 480 * 100%);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  /* --background-size: contain;-- */
   background-color: rgba($bg-color-bright, 85%);
   top: 0;
+  left: 0;
   z-index: -2;
 }
 
@@ -42,15 +41,163 @@
       #3a3a3a 100%
     );
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: contain, cover;
   top: 0;
+  left: 0;
   z-index: -3;
+}
+
+.nutrition-selector__wrapper {
+  min-width: 280px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 27px 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector {
+    min-width: 708px;
+    max-width: 708px;
+    background: none;
+    margin: 0 auto;
+    padding: 40px 30px 0;
+  }
+
+  .nutrition-selector::before {
+    content: none;
+  }
+
+  .nutrition-selector::after {
+    content: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__wrapper {
+    min-width: 708px;
+    max-width: 708px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector {
+    position: relative;
+    background:
+      linear-gradient(
+        to left,
+        transparent 0% 50%,
+        #ffffff 50%
+      );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-width: initial;
+    max-width: initial;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nutrition-selector::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 50%;
+    min-height: 694px;
+    max-height: 694px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: rgba($bg-color-bright, 85%);
+    top: 0;
+    left: initial;
+    right: 0;
+    z-index: -1;
+  }
+
+
+  .nutrition-selector::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: initial;
+    top: 0;
+    right: 0;
+    width: 50%;
+    min-height: 694px;
+    max-height: 694px;
+    background:
+      url("../../images/happy-cat-desktop@1x.jpg"),
+      linear-gradient(
+        to left,
+        #4b4b4b 0%,
+        #3a3a3a 100%
+      );
+    background-repeat: no-repeat;
+    background-position: -1% 100%;
+    background-size: auto 694px, cover;
+    z-index: -3;
+  }
+}
+
+@media (min-width: 2080px) {
+  .nutrition-selector::after {
+    background-position: 100% 100%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__wrapper {
+    max-width: 709px;
+    margin: 0 auto;
+    display: grid;
+    min-height: 810px;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 143px 60px 52px;
+    display: grid;
+    min-height: 499px;
+    grid-template-columns: 80px 244px 123px 49px 505px 221px;
+    grid-template-rows: 81px 1fr 1fr;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__text {
+    grid-column: 2/5;
+    grid-row: 2/3;
+  }
 }
 
 .nutrition-selector__title {
   @include font-text-secondary(36px, 36px, $color-text-special);
   text-align: center;
+  margin: 0 15px 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__title {
+    @include font-text-secondary(60px, 60px, $color-text-dark);
+    text-align: start;
+    margin-left: 90px;
+    margin-right: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__title {
+    margin: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .nutrition-selector__description {
@@ -58,16 +205,97 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 29px;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__description {
+    @include font-text-secondary(20px, 20px, $color-text-dark);
+    text-align: start;
+    margin-left: 90px;
+    margin-right: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__description {
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__image-container {
+    grid-row: 2/4;
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__image-container {
+    grid-column: 4/6;
+    grid-row: 1/4;
+  }
 }
 
 .nutrition-selector__image {
   display: block;
+  object-fit: contain;
+  object-position: center;
   width: 280px;
   height: 270px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__image {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__image {
+    width: 552px;
+    height: 499px;
+    margin: 0;
+    grid-column: 4/6;
+    grid-row: 1/4;
+    object-fit: contain;
+    display: block;
+  }
+}
+
 
 .nutrition-selector__link {
   display: block;
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__text {
+    position: relative;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .nutrition-selector__link {
+    max-width: 222px;
+    grid-row: 2/auto;
+    grid-column: 1/2;
+    margin-top: 29px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-selector__link {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: min-content;
+    max-width: 192px;
+    margin-top: 52px;
+    margin-left: initial;
+  }
 }

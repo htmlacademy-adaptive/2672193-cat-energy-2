@@ -2,6 +2,32 @@
   @include list();
 }
 
+li:first-child::before {
+  border-top: 1px solid #ebebeb;
+}
+
+@media (min-width: $tablet-width) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-list {
+    gap: 80px;
+  }
+}
+
 .product-list__item {
-  border: none;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .product-list__item {
+    padding: 10px 37px 40px;
+  }
 }

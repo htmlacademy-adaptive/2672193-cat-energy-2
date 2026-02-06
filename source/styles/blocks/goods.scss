@@ -1,11 +1,37 @@
 .goods {
-  border: none;
+  min-width: 280px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 27px 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .goods {
+    min-width: 708px;
+    max-width: 708px;
+    margin: 0 auto;
+    padding: 65px 30px 77px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods {
+    min-width: 1220px;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 188px 60px 71px;
+  }
 }
 
 .goods__title {
   @include font-text-secondary(36px, 36px, $color-text-dark);
+  margin: 0;
+  margin-bottom: 41px;
 }
 
-.goods__list {
-  border: none;
+@media (min-width: $tablet-width) {
+  .goods__title {
+    @include font-text-secondary(60px, 60px, $color-text-dark);
+    margin-bottom: 84px;
+  }
 }

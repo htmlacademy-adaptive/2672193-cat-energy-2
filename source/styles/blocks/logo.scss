@@ -1,5 +1,4 @@
 .logo {
-  display: inline-block;
   text-decoration: none;
 
   &:hover,
@@ -13,9 +12,10 @@
 }
 
 .logo__image {
-  border: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .logo__text {
-  border: none;
+  display: block;
 }
