@@ -1,0 +1,33 @@
+.button {
+  @include font-text-secondary(16px, 20px, $color-text-special);
+  background-color: $bg-color-bright;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: #5eaa2f;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    @include font-text-secondary(16px, 20px, $color-text-special);
+  }
+}
+
+.button--special {
+  @include font-text-secondary(16px, 20px, $color-text-base);
+  background-color: $bg-color-base;
+}
+
+.button--submit {
+  @include font-text-secondary(20px, 26px, $color-text-special);
+}

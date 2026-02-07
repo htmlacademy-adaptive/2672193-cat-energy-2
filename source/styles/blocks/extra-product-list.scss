@@ -1,0 +1,22 @@
+.extra-product-list {
+  @include list();
+}
+
+/* --
+@media (min-width: $tablet-width) {
+  .extra-product-list {
+    border: none;
+  }
+}
+  -- */
+
+.extra-product-list__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-product-list__item {
+    padding: 10px 37px 40px;
+  }
+}

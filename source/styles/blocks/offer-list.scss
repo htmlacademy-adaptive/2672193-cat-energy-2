@@ -1,0 +1,26 @@
+.offer-list {
+  @include list();
+}
+
+@media (min-width: $desktop-width) {
+  .offer-list {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+.offer-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

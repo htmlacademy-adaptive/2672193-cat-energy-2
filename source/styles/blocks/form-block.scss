@@ -1,0 +1,38 @@
+/* --
+.form-block {
+  border: none;
+}
+  -- */
+
+.form-block__input {
+  margin-bottom: 16px;
+  padding: 13px;
+  width: 254px;
+  border: 1px solid #cdcdcd;
+}
+
+@media (min-width: $tablet-width) {
+  .form-block__input {
+    width: 376px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-block__input {
+    width: 470px;
+  }
+}
+
+.form-block__button {
+  border: none;
+  width: 100%;
+  padding: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-block__button {
+    width: 256px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+}

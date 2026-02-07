@@ -1,0 +1,11 @@
+.input-block {
+  @include font-text-secondary(20px, 30px, $color-text-base);
+}
+
+.input-block::placeholder {
+  text-transform: uppercase;
+}
+
+.input-block:not(:placeholder-shown):invalid {
+  border-color: #ff8282;
+}

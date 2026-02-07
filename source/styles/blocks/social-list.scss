@@ -1,0 +1,117 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    border: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    min-width: 132px;
+  }
+}
+
+.social-list__item {
+  min-width: 28px;
+  min-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.social-list__link {
+  @include font-text-secondary(16px, 16px, #666666);
+  display: inline-block;
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: $bg-color-bright;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: #c9e1bb;
+    }
+  }
+
+  &:disabled {
+    &::before {
+      background-color: #bebebe;
+    }
+  }
+  vertical-align: middle;
+}
+
+.social-list__link--vk {
+  position: relative;
+  min-width: 27px;
+  min-height: 17px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 27px;
+    height: 17px;
+    background-color: #666666;
+    mask-image: url("../../icons/vk.svg");
+    mask-size: 27px 17px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 0;
+    left: 0;
+  }
+}
+
+.social-list__link--youtube {
+  position: relative;
+  min-width: 24px;
+  min-height: 19px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 24px;
+    height: 19px;
+    background-color: #666666;
+    mask-image: url("../../icons/youtube.svg");
+    mask-size: 24px 19px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 0;
+    left: 0;
+  }
+}
+
+.social-list__link--telegram {
+  position: relative;
+  min-width: 20px;
+  min-height: 18px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 18px;
+    background-color: #666666;
+    mask-image: url("../../icons/telegram.svg");
+    mask-size: 20px 18px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 0;
+    left: 0;
+  }
+}
