@@ -22,10 +22,11 @@
     min-width: 708px;
     max-width: 708px;
     margin: 0 auto;
-    padding: 55px 30px;
+    padding: 45px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 42px;
   }
 }
 
@@ -34,13 +35,15 @@
     min-width: 1220px;
     max-width: 1220px;
     margin: 0 auto;
-    padding: 66px 60px;
+    padding: 55px 60px;
   }
 }
 
 .links__logo {
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  width: 128px;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,15 +53,24 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .links__logo {
+    width: 128px;
+    height: 24px;
+  }
+}
+
 
 .links__social {
   @include list();
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-block: 20px;
+  padding-bottom: 19px;
 }
 
 @media (min-width: $tablet-width) {
   .links__social {
     margin-bottom: 0;
+    padding-left: 35px;
   }
 }

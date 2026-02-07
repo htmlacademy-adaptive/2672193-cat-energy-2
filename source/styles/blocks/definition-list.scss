@@ -4,16 +4,20 @@
   flex-wrap: wrap;
   gap: 32px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-/* --
 @media (min-width: $tablet-width) {
   .definition-list {
-    border: none;
+    gap: 43px;
   }
 }
-  -- */
+
+@media (min-width: $desktop-width) {
+  .definition-list {
+    margin-bottom: 35px;
+  }
+}
 
 .definition-list__description {
   @include font-text-secondary(24px, 24px, $color-text-dark);
@@ -23,7 +27,7 @@
   min-width: 124px;
   max-width: 124px;
   min-height: 28px;
-  padding: 14px 15px;
+  padding: 14px 15px 17px;
   box-sizing: border-box;
 }
 
@@ -32,6 +36,7 @@
     @include font-text-secondary(30px, 37px, $color-text-dark);
     min-width: 162px;
     max-width: 162px;
+    padding-bottom: 20px;
   }
 }
 
@@ -50,6 +55,7 @@
   .definition-list__term {
     @include font-text-primary(14px, 14px, $color-text-base);
     background-color: $color-text-special;
+    min-width: 125px;
   }
 }
 

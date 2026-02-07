@@ -103,7 +103,7 @@
 @media (width >= 768px) {
   .promos-and-new__form {
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 63px;
     display: flex;
   }
 }
@@ -113,12 +113,13 @@
     min-width: 1220px;
     max-width: 1220px;
     margin: 0 auto;
-    padding: 96px 60px 104px;
+    padding: 96px 60px 83px;
   }
 }
 
 @media (width >= 1340px) {
   .promos-and-new__title {
+    @include font-text-secondary(40px, 40px, $color-text-dark);
     margin: 0 0 72px -40px;
   }
 }

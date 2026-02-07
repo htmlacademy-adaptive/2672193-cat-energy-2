@@ -175,7 +175,7 @@
   .program-card__title {
     margin: 0;
     margin-left: 162px;
-    margin-bottom: 77px;
+    margin-bottom: 73px;
   }
 }
 
@@ -201,7 +201,7 @@
     @include font-text-primary(16px, 24px, $color-text-dark);
     margin-left: 0;
     margin-bottom: 48px;
-    margin-right: 316px;
+    margin-right: 264px;
   }
 }
 
@@ -262,8 +262,8 @@
 .program-card__link::after {
   display: block;
   content: "";
-  width: 24px;
-  height: 12px;
+  width: 32px;
+  height: 10px;
   background-color: $color-text-dark;
   mask-image: url("../../icons/arrow.svg");
   mask-size: 24px 12px;
@@ -275,6 +275,10 @@
 @media (min-width: $tablet-width) {
   .program-card__link {
     @include font-text-secondary(20px, 30px, $color-text-dark);
-    gap: 25px;
+    gap: 29px;
+  }
+
+  .program-card__link::after {
+    mask-size: 32px 16px;
   }
 }

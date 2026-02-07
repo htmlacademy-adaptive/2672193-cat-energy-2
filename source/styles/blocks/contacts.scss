@@ -58,9 +58,22 @@
   max-width: 140px;
 }
 
+
 @media (min-width: $tablet-width) {
   .contacts__address {
     @include font-text-primary(16px, 20px, $color-text-base);
     text-align: end;
+    min-width: 160px;
+  }
+
+  .contacts__address-city {
+    margin-top: 15px;
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__address {
+    text-align: start;
   }
 }

@@ -24,7 +24,7 @@
   counter-increment: benefits__item 1;
 
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   &::before {
@@ -69,7 +69,7 @@
 @media (min-width: $tablet-width) {
   .benefits__item--useful {
     width: 230px;
-    margin-right: 16px;
+    margin-right: 17px;
   }
 
   .benefits__item--useful::before {
@@ -87,7 +87,7 @@
     line-height: 280px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5px;
   }
 }
 
@@ -188,5 +188,15 @@
 @media (min-width: $tablet-width) {
   .benefits__description {
     @include font-text-primary(16px, 24px, $color-text-base);
+  }
+}
+
+.benefits__description-br {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .benefits__description-br {
+    display: initial;
   }
 }

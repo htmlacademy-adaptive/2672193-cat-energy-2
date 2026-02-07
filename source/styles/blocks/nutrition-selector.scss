@@ -34,7 +34,10 @@
   width: 100%;
   height: calc(302 / 480 * 100%);
   background:
-    url("../../images/happy-cat-mobile@1x.jpg"),
+    image-set(
+      url("../../images/happy-cat-mobile@1x.webp") type("image/webp"),
+      url("../../images/happy-cat-mobile@1x.jpg") type("image/jpeg")
+    ),
     linear-gradient(
       to right,
       #4b4b4b 0%,
@@ -61,7 +64,7 @@
     max-width: 708px;
     background: none;
     margin: 0 auto;
-    padding: 40px 30px 0;
+    padding: 65px 30px 0;
   }
 
   .nutrition-selector::before {
@@ -130,7 +133,10 @@
     min-height: 694px;
     max-height: 694px;
     background:
-      url("../../images/happy-cat-desktop@1x.jpg"),
+      image-set(
+        url("../../images/happy-cat-desktop@1x.webp") type("image/webp"),
+        url("../../images/happy-cat-desktop@1x.jpg") type("image/jpeg")
+      ),
       linear-gradient(
         to left,
         #4b4b4b 0%,
@@ -181,7 +187,7 @@
 .nutrition-selector__title {
   @include font-text-secondary(36px, 36px, $color-text-special);
   text-align: center;
-  margin: 0 15px 40px;
+  margin: 0 15px 25px;
 }
 
 @media (min-width: $tablet-width) {
@@ -190,6 +196,7 @@
     text-align: start;
     margin-left: 90px;
     margin-right: 200px;
+    margin-bottom: 40px;
   }
 }
 
@@ -216,6 +223,7 @@
     text-align: start;
     margin-left: 90px;
     margin-right: 200px;
+    margin-bottom: 20px;
   }
 }
 
@@ -281,11 +289,13 @@
 
 @media (min-width: $tablet-width) {
   .nutrition-selector__link {
-    max-width: 222px;
+    @include font-text-secondary(20px, 26px, $color-text-special);
+    max-width: 216px;
     grid-row: 2/auto;
     grid-column: 1/2;
     margin-top: 29px;
     margin-left: 90px;
+    padding: 14px;
   }
 }
 
@@ -294,8 +304,9 @@
     grid-column: 2/3;
     grid-row: 3/4;
     height: min-content;
-    max-width: 192px;
-    margin-top: 52px;
+    max-width: 244px;
+    margin-top: 22px;
     margin-left: initial;
+    padding: 14px;
   }
 }

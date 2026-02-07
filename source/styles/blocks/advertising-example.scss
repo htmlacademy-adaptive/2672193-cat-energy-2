@@ -22,6 +22,7 @@
   .advertising-example__container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
 }
 
@@ -29,6 +30,7 @@
   .advertising-example__container {
     width: 436px;
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -53,7 +55,7 @@
     min-width: 1220px;
     max-width: 1220px;
     margin: 0 auto;
-    padding: 69px 60px 85px;
+    padding: 69px 60px 75px;
     position: relative;
   }
 }
@@ -121,6 +123,13 @@
     text-align: end;
     min-width: 298px;
     max-width: 298px;
+    padding-top: 11px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advertising-example__subtitle {
+    margin-bottom: 0;
   }
 }
 

@@ -13,11 +13,20 @@
   }
 }
 
-/* --
-.social-list__item {
-  border: none;
+@media (min-width: $tablet-width) {
+  .social-list {
+    min-width: 132px;
+  }
 }
-  -- */
+
+.social-list__item {
+  min-width: 28px;
+  min-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .social-list__link {
   @include font-text-secondary(16px, 16px, #666666);

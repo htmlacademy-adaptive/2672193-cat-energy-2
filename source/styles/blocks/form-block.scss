@@ -19,18 +19,20 @@
 
 @media (min-width: $desktop-width) {
   .form-block__input {
-    width: 496px;
+    width: 470px;
   }
 }
 
 .form-block__button {
   border: none;
   width: 100%;
+  padding: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .form-block__button {
     width: 256px;
     height: 56px;
+    flex-shrink: 0;
   }
 }

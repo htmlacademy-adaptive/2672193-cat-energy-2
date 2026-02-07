@@ -17,11 +17,12 @@ li:first-child::before {
 @media (min-width: $desktop-width) {
   .product-list {
     gap: 80px;
+    row-gap: 65px;
   }
 }
 
 .product-list__item {
-  padding-top: 20px;
+  padding-top: 23px;
   padding-bottom: 25px;
   position: relative;
 }

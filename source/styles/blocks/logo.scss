@@ -19,3 +19,22 @@
 .logo__text {
   display: block;
 }
+
+@media (min-width: $desktop-width) {
+  .logo__text {
+    width: 118px;
+    height: 21px;
+  }
+}
+
+.logo__image-footer {
+  width: 128px;
+  height: 24px;
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image-footer {
+    width: 128px;
+    height: 24px;
+  }
+}
