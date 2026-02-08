@@ -3,16 +3,12 @@
   justify-content: space-between;
   min-width: 280px;
   max-width: 280px;
-  margin: 0 auto;
-  padding: 26px 20px;
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
     min-width: 628px;
     max-width: 628px;
-    margin: 0 auto;
-    padding: 60px 70px;
   }
 }
 
@@ -20,8 +16,6 @@
   .contacts {
     min-width: 407px;
     max-width: 407px;
-    margin: 0;
-    padding: 60px 78px 60px 80px;
   }
 }
 

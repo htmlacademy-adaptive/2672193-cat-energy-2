@@ -1,16 +1,12 @@
 .goods {
   min-width: 280px;
   max-width: 280px;
-  margin: 0 auto;
-  padding: 27px 20px 0;
 }
 
 @media (min-width: $tablet-width) {
   .goods {
     min-width: 708px;
     max-width: 708px;
-    margin: 0 auto;
-    padding: 65px 30px 77px;
   }
 }
 
@@ -18,8 +14,6 @@
   .goods {
     min-width: 1220px;
     max-width: 1220px;
-    margin: 0 auto;
-    padding: 188px 60px 71px;
   }
 }
 

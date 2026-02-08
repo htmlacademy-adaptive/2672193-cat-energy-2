@@ -20,7 +20,6 @@
   height: calc(302 / 480 * 100%);
   background-repeat: no-repeat;
   background-position: center;
-  /* --background-size: contain;-- */
   background-color: rgba($bg-color-bright, 85%);
   top: 0;
   left: 0;
@@ -63,8 +62,6 @@
     min-width: 708px;
     max-width: 708px;
     background: none;
-    margin: 0 auto;
-    padding: 65px 30px 0;
   }
 
   .nutrition-selector::before {
@@ -101,7 +98,6 @@
     min-width: initial;
     max-width: initial;
     width: 100%;
-    padding: 0;
   }
 
   .nutrition-selector::before {
