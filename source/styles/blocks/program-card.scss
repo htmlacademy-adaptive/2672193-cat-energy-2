@@ -237,7 +237,7 @@
 
 
 .program-card__link:hover,
-&:focus-visible {
+.program-card__link:focus-visible {
   color: $color-text-dark;
 
   &::after {
