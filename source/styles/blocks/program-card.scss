@@ -229,12 +229,18 @@
   height: 12px;
   background-color: $color-text-dark;
   mask-image: url("../../icons/arrow.svg");
-  mask-size: 24px 12px;
+  mask-size: 32px 10px;
   mask-repeat: no-repeat;
   mask-position: center;
   margin-top: 1px;
+  margin-left: 5px;
 }
 
+@media (min-width: $tablet-width) {
+  .program-card__link::after {
+    margin-left: 0;
+  }
+}
 
 .program-card__link:hover,
 .program-card__link:focus-visible {
