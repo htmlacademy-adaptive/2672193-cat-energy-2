@@ -1,19 +1,11 @@
 .program-card {
   background-color: $bg-color-base;
   position: relative;
-  padding: 30px 33px 18px 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .program-card {
-    padding: 77px 52px 53px;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .program-card {
     width: 466px;
-    padding-bottom: 55px;
   }
 }
 
@@ -228,48 +220,49 @@
   gap: 15px;
   align-items: center;
   padding: 4px 0;
-
-  &:hover,
-  &:focus-visible {
-    color: $color-text-dark;
-
-    &::after {
-      background-color: $color-text-dark;
-      width: 32px;
-      mask-size: 32px 12px;
-    }
-  }
-
-  &:active {
-    color: #b3b3b3;
-
-    &::after {
-      background-color: #b3b3b3;
-      width: 32px;
-      mask-size: 32px 12px;
-    }
-  }
-
-  &:disabled {
-    color: #bebebe;
-
-    &::after {
-      background-color: #bebebe;
-    }
-  }
 }
 
 .program-card__link::after {
   display: block;
   content: "";
-  width: 32px;
-  height: 10px;
+  width: 24px;
+  height: 12px;
   background-color: $color-text-dark;
   mask-image: url("../../icons/arrow.svg");
   mask-size: 24px 12px;
   mask-repeat: no-repeat;
   mask-position: center;
   margin-top: 1px;
+}
+
+
+.program-card__link:hover,
+.program-card__link:focus-visible {
+  color: $color-text-dark;
+
+  &::after {
+    background-color: $color-text-dark;
+    width: 32px;
+    mask-size: 32px 12px;
+  }
+}
+
+.program-card__link:active {
+  color: #b3b3b3;
+
+  &::after {
+    background-color: #b3b3b3;
+    width: 32px;
+    mask-size: 32px 12px;
+  }
+}
+
+.program-card__link:disabled {
+  color: #bebebe;
+
+  &::after {
+    background-color: #bebebe;
+  }
 }
 
 @media (min-width: $tablet-width) {

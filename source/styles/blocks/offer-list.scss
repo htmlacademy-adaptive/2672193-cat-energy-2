@@ -9,6 +9,22 @@
   }
 }
 
+.offer-list__item {
+  padding: 30px 33px 18px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer-list__item {
+    padding: 77px 52px 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer-list__item {
+    padding-bottom: 55px;
+  }
+}
+
 .offer-list__item:not(:last-child) {
   margin-bottom: 20px;
 }
