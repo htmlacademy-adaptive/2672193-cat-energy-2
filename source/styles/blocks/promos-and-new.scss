@@ -7,7 +7,7 @@
   color: #000000;
   background-color: #ffffff;
   width: fit-content;
-  margin: 0 0 32px;
+  margin: 0 0 30px;
   padding-right: 40px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -97,6 +97,10 @@
   }
 }
 
+.promos-and-new__form {
+  margin-bottom: 5px;
+}
+
 @media (width >= 768px) {
   .promos-and-new__form {
     justify-content: center;
@@ -121,6 +125,6 @@
 
 @media (width >= 1340px) {
   .promos-and-new__form {
-    margin-bottom: 0;
+    margin-bottom: 17px;
   }
 }

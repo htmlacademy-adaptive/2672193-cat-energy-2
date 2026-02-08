@@ -86,12 +86,13 @@
 
 .main__promos-and-new {
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 45px 20px;
 }
 
 @media (width >= 768px) {
   .main__promos-and-new {
     padding: 0 38px;
+    padding-bottom: 20px;
   }
 }
 

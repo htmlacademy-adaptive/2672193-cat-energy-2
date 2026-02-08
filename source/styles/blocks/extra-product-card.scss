@@ -11,8 +11,8 @@
 @media (min-width: $tablet-width) {
   .extra-product-card {
     grid-template-columns: 285px 254px 91px;
-    grid-template-rows: auto 70px;
-    padding-top: 26px;
+    grid-template-rows: auto auto;
+    padding-top: 23px;
     border-left: 1px solid #ebebeb;
     border-right: 1px solid #ebebeb;
     padding-bottom: 32px;
@@ -34,7 +34,7 @@
   text-decoration: none;
   grid-column: 1/2;
   grid-row: 1/2;
-  margin-top: auto;
+  margin-top: 12px;
 }
 
 @media (min-width: $tablet-width) {
@@ -79,6 +79,8 @@
   align-items: end;
   grid-column: 1/4;
   grid-row: 2/3;
+  margin-top: 10px;
+  margin-bottom: 17px;
 }
 
 @media (min-width: $tablet-width) {
@@ -91,6 +93,7 @@
     margin-top: auto;
     text-align: end;
     align-items: start;
+    margin-bottom: 22px;
   }
 }
 
