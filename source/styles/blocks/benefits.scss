@@ -4,14 +4,12 @@
     flex-wrap: wrap;
     gap: 37px 137px;
     counter-reset: benefits__item 0;
-    margin-bottom: 47px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .benefits {
     gap: 77px;
-    margin-bottom: 0;
   }
 }
 

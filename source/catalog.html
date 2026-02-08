@@ -36,6 +36,7 @@
       </picture>
     </a>
     <nav class="main-header__nav main-nav">
+      <!-- Если JS выключен - модификатор nojs к main-nav -->
       <input class="main-nav__input visually-hidden" type="checkbox" id="main-nav-input" name="main-nav-input">
       <label class="main-nav__toggle" for="main-nav-input"></label>
       <ul class="main-nav__list">
@@ -58,8 +59,8 @@
     </nav>
   </header>
 
-  <main class="page__main">
-    <section class="goods">
+  <main class="page__main main">
+    <section class="main__goods goods">
       <h1 class="goods__title">Каталог продукции</h1>
       <ul class="goods__list product-list">
         <li class="product-list__item product-card">
@@ -283,7 +284,7 @@
       </ul>
     </section>
 
-    <section class="extra-goods">
+    <section class="main__extra-goods extra-goods">
       <h2 class="extra-goods__title">Дополнительные товары</h2>
       <div class="extra-goods__wrapper">
         <ul class="extra-goods__list extra-product-list">
@@ -334,7 +335,7 @@
       </div>
     </section>
 
-    <section class="promos-and-new">
+    <section class="main__promos-and-new promos-and-new">
       <h2 class="promos-and-new__title">Акции и новинки</h2>
       <p class="promos-and-new__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <form class="promos-and-new__form form-block" action="https://echo.htmlacademy.ru/" method="post">

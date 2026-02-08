@@ -73,6 +73,25 @@
   background-color: $bg-color-base;
 }
 
+@media (min-width: $tablet-width) {
+  .main-footer__links {
+    margin-bottom: 0;
+  }
+}
+
+
+.main-footer__contacts {
+  margin: 0 auto;
+  padding: 26px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__contacts {
+    margin: 0 auto;
+    padding: 60px 70px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .main-footer__contacts {
     align-self: center;
@@ -81,6 +100,8 @@
     grid-area: 2 / 2 / 3 / 3;
     z-index: 1;
     background-color: $color-text-special;
+    margin: 0;
     margin-right: auto;
+    padding: 60px 78px 60px 80px;
   }
 }

@@ -150,3 +150,27 @@
     margin-left: 63px;
   }
 }
+
+.advertising-example__list {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $desktop-width) {
+  .advertising-example__list {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advertising-example__slider {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advertising-example__slider {
+    margin: 0;
+    margin-bottom: 85px;
+    margin-right: 60px;
+  }
+}
