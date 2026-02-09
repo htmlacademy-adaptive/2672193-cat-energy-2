@@ -49,6 +49,12 @@
   overflow: hidden;
 }
 
+@media (min-width: $tablet-width) {
+  .main-footer__map-picture {
+    max-height: 400px;
+  }
+}
+
 .main-footer__map-image {
   display: block;
   width: 100%;
@@ -82,7 +88,7 @@
 
 .main-footer__contacts {
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 25px 20px;
 }
 
 @media (min-width: $tablet-width) {
